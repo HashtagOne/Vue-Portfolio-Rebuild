@@ -33,7 +33,7 @@
 .section-label {
     color: var(--text-muted);
     font-size: 0.75rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
