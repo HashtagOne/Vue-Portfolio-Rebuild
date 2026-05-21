@@ -1,0 +1,65 @@
+<script setup></script>
+
+<template>
+    <nav>
+        <span class="nav-name">Epicc</span>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</template>
+
+<style scoped>
+nav {
+    background-color: var(--nav-bg);
+    padding: 16px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+    transition: color 0.2s;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-blue);
+    transition: width 0.25s ease;
+}
+
+a:hover {
+    color: var(--text-primary);
+}
+
+a:hover::after {
+    width: 100%;
+}
+</style>
