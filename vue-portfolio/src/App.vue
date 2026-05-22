@@ -10,6 +10,7 @@ let firstLoad = true
 watch(() => route.path, (newPath) => {
   if (firstLoad) {
     firstLoad = false
+    transitionName.value = newPath.startsWith('/projects') ? 'slide-left' : 'slide-right'
     return
   }
   if (newPath.startsWith('/projects/')) {

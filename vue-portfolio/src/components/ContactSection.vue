@@ -1,7 +1,8 @@
 <script setup></script>
 
 <template>
-    <section id="contact" class="hidden-section">
+    <section id="contact" class="hidden-section
+    ">
         <div class="section-header">
             <span class="section-label">Contact</span>
             <h2>Get In Touch</h2>

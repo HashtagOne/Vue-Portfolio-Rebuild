@@ -5,7 +5,7 @@ function scrollTo(id) {
 }</script>
 
 <template>
-    <nav>
+    <nav class="navbar">
         <span class="nav-name">Epicc</span>
         <ul>
             <li><a @click.prevent="scrollTo('#about')">About</a></li>
@@ -33,6 +33,22 @@ nav {
     font-weight: 700;
     color: var(--text-primary);
 }
+
+.navbar {
+    animation: fadeDown 0.6s ease both;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-24px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 ul {
     list-style: none;

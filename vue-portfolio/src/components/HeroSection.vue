@@ -1,12 +1,44 @@
-<script setup></script>
+<script setup>
+function scrollTo(id) {
+    const el = document.querySelector(id)
+    if (el) el.scrollIntoView ({ behavior: 'smooth'})}
+
+
+    const firstPart = ("Hi, I'm").split('').map((letter, i) => ({
+        letter: letter === ' ' ? '\u00a0' : letter,
+        index: i
+    }))
+
+    const secondPart = ("Epicc").split('').map((letter, i) => ({
+        letter,
+        index: i + 9
+    }))
+</script>
 
 <template>
     <section id="hero">
         <div class="hero-content">
             <span class = "hero-tag">Available</span>
-            <h1 class = "hero-name">Hi, I'm <span class="accent">Epicc.</span></h1>
+            <h1 class="hero-name">
+                <span class="word">
+                    <span
+                    v-for="item in firstPart"
+                    :key="item.index"
+                    class="letter"
+                    :style="{ animationDelay: `${item.index * 0.05}s` }"
+                    >{{  item.letter }}</span>
+                </span>
+                <span class="word accent-word">
+                    <span
+                    v-for="item in secondPart"
+                    :key="item.index"
+                    class="letter accent"
+                    :style="{ animationDelay: `${item.index * 0.05}s` }"
+                    >{{ item.letter }}</span>
+                </span>
+            </h1>
             <p class="hero-sub">Aspiring full stack developer, currently building.</p>
-            <a href="#projects" class="hero-btn">View my work</a>
+            <a @click.prevent="scrollTo('#projects')" class="hero-btn">View my work</a>
         </div>
         <div class="hero-photo">
             <span>photo</span>
@@ -103,6 +135,33 @@
 .hero-btn:hover {
     opacity:0.85;
     transform: translateY(-2px);
+}
+
+a {
+    cursor: pointer;
+}
+
+.letter {
+    display: inline-block;
+    animation: dropIn 0.5s ease both;
+}
+
+.word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 </style>
