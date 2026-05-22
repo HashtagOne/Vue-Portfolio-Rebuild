@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard.vue'
 </script>
 
 <template>
-  <section id="projects">
+  <section id="projects" class="hidden-section">
     <div class="section-header">
       <span class="section-label">Work</span>
       <h2>Projects</h2>

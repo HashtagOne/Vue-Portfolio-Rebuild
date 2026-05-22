@@ -2,7 +2,7 @@
 
 
 <template>
-    <section id="about">
+    <section id="about" class="hidden-section">
         <div class="section-header">
             <span class="section-label">About</span>
             <h2>About Me</h2>

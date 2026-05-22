@@ -1,15 +1,29 @@
 <script setup>
-import { useRoute } from 'vue-router'
+import { routeLocationKey, useRoute, useRouter } from 'vue-router'
 import {projects} from '../projects.js'
+import { onMounted } from 'vue'
 const route = useRoute()
+const router = useRouter()
+
+function goBack() {
+    router.push({ path: '/', state: { fromDetail: true } })
+}
+
+onMounted(() => {
+    setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'instant'})
+    }, 50)
+})
 
 const project = projects.find(n => n.id === route.params.id);
 </script>
 
 <template>
+<div>
     <div v-if="project">
         <!--HERO -->
         <section class="detail-hero">
+            <button class="back-btn" @click="goBack()">← Back</button>
             <div class="detail-left">
                 <div class="detail-tags">
                     <span class="tag" v-for="tag in project.tags" :key="tag">{{ tag }}</span>
@@ -56,6 +70,7 @@ const project = projects.find(n => n.id === route.params.id);
     <div v-else class="not-found">
         <h2> Project not found.</h2>
     </div>
+</div>
 </template>
 
 <style scoped>
@@ -241,6 +256,23 @@ ul li::before {
     justify-content: center;
     height: 80vh;
     color: var(--text-secondary);
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+    width: fit-content;
+}
+
+.back-btn:hover {
+    color: var(--text-primary);
 }
 
 </style>
