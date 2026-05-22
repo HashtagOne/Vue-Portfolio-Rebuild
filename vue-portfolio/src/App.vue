@@ -3,9 +3,15 @@ import { ref, watch } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 
 const route = useRoute()
-const transitionName = ref('slide-left')
+const transitionName = ref('')
+
+let firstLoad = true
 
 watch(() => route.path, (newPath) => {
+  if (firstLoad) {
+    firstLoad = false
+    return
+  }
   if (newPath.startsWith('/projects/')) {
     transitionName.value = 'slide-left'
   } else {

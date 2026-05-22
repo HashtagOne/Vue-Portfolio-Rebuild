@@ -1,12 +1,16 @@
-<script setup></script>
+<script setup>
+function scrollTo(id) {
+    const el = document.querySelector(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth'})
+}</script>
 
 <template>
     <nav>
         <span class="nav-name">Epicc</span>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a @click.prevent="scrollTo('#about')">About</a></li>
+            <li><a @click.prevent="scrollTo('#projects')">Projects</a></li>
+            <li><a @click.prevent="scrollTo('#contact')">Contact</a></li>
         </ul>
     </nav>
 </template>
@@ -42,6 +46,7 @@ a {
     font-size: 0.9rem;
     position: relative;
     transition: color 0.2s;
+    cursor: pointer;
 }
 
 a::after {

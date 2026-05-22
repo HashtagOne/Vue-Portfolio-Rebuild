@@ -1,5 +1,5 @@
 <script setup>
-import { routeLocationKey, useRoute, useRouter } from 'vue-router'
+import {useRoute, useRouter } from 'vue-router'
 import {projects} from '../projects.js'
 import { onMounted } from 'vue'
 const route = useRoute()
