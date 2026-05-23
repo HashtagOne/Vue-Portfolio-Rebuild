@@ -1,3 +1,5 @@
+
+
 export const projects = [
   {
     id: "python-quiz",
@@ -8,9 +10,9 @@ export const projects = [
     techStack: ["Python", "JSON"],
     demoVideo: null,
     screenshots: [
-      '/screenshots/py-quiz/1.png',
-      '/screenshots/py-quiz/2.png',
-      '/screenshots/py-quiz/3.png',
+      '/Vue-Portfolio-Rebuild/screenshots/py-quiz/1.png',
+      '/Vue-Portfolio-Rebuild/screenshots/py-quiz/2.png',
+      '/Vue-Portfolio-Rebuild/screenshots/py-quiz/3.png',
     ],
     whatILearned: [
       "How to structure a CLI app with multiple navigation layers",
@@ -29,8 +31,8 @@ export const projects = [
     techStack: ["Python", "Turtle"],
     demoVideo: null,
     screenshots: [
-      '/screenshots/recursion/1.png',
-      '/screenshots/recursion/2.png',
+      '/Vue-Portfolio-Rebuild/screenshots/recursion/1.png',
+      '/Vue-Portfolio-Rebuild/screenshots/recursion/2.png',
     ],
     whatILearned: [
       "How recursion builds on itself to create complex patterns",
@@ -49,9 +51,9 @@ export const projects = [
     techStack: ["JavaScript", "HTML", "CSS", "localStorage"],
     demoVideo: null,
     screenshots: [
-      '/screenshots/js-quiz/1.png',
-      '/screenshots/js-quiz/2.png',
-      '/screenshots/js-quiz/3.png',
+      '/Vue-Portfolio-Rebuild/screenshots/js-quiz/1.png',
+      '/Vue-Portfolio-Rebuild/screenshots/js-quiz/2.png',
+      '/Vue-Portfolio-Rebuild/screenshots/js-quiz/3.png',
     ],
     whatILearned: [
       "Rebuilding a CLI app as a browser-based UI",
@@ -70,9 +72,9 @@ export const projects = [
     techStack: ["JavaScript", "HTML", "CSS", "OpenWeather API"],
     demoVideo: null,
     screenshots: [
-      '/screenshots/weather-app/1.png',
-      '/screenshots/weather-app/2.png',
-      '/screenshots/weather-app/3.png',
+      '/Vue-Portfolio-Rebuild/screenshots/weather-app/1.png',
+      '/Vue-Portfolio-Rebuild/screenshots/weather-app/2.png',
+      '/Vue-Portfolio-Rebuild/screenshots/weather-app/3.png',
     ],
     whatILearned: [
       "Consuming a public REST API with fetch",
@@ -91,10 +93,10 @@ export const projects = [
     techStack: ["Python", "Flask", "SQLite", "SQLAlchemy", "JavaScript", "HTML", "CSS"],
     demoVideo: null,
     screenshots: [
-      '/screenshots/notes-app/1.png',
-      '/screenshots/notes-app/2.png',
-      '/screenshots/notes-app/3.png',
-      '/screenshots/notes-app/4.png',
+      '/Vue-Portfolio-Rebuild/screenshots/notes-app/1.png',
+      '/Vue-Portfolio-Rebuild/screenshots/notes-app/2.png',
+      '/Vue-Portfolio-Rebuild/screenshots/notes-app/3.png',
+      '/Vue-Portfolio-Rebuild/screenshots/notes-app/4.png',
     ],
     whatILearned: [
       "Building and consuming a REST API end to end",
@@ -114,11 +116,11 @@ export const projects = [
     techStack: ["JavaScript", "HTML", "CSS", "localStorage"],
     demoVideo: null,
     screenshots: [
-      '/screenshots/kanban-board/1.png',
-      '/screenshots/kanban-board/2.png',
-      '/screenshots/kanban-board/3.png',
-      '/screenshots/kanban-board/4.png',
-      '/screenshots/kanban-board/5.png',
+      '/Vue-Portfolio-Rebuild/screenshots/kanban-board/1.png',
+      '/Vue-Portfolio-Rebuild/screenshots/kanban-board/2.png',
+      '/Vue-Portfolio-Rebuild/screenshots/kanban-board/3.png',
+      '/Vue-Portfolio-Rebuild/screenshots/kanban-board/4.png',
+      '/Vue-Portfolio-Rebuild/screenshots/kanban-board/5.png',
     ],
     whatILearned: [
       "The HTML native Drag and Drop API",
@@ -137,11 +139,11 @@ export const projects = [
     techStack: ["JavaScript", "HTML", "CSS", "localStorage"],
     demoVideo: null,
     screenshots: [
-      '/screenshots/habit-tracker/1.png',
-      '/screenshots/habit-tracker/2.png',
-      '/screenshots/habit-tracker/3.png',
-      '/screenshots/habit-tracker/4.png',
-      '/screenshots/habit-tracker/5.png',
+      '/Vue-Portfolio-Rebuild/screenshots/habit-tracker/1.png',
+      '/Vue-Portfolio-Rebuild/screenshots/habit-tracker/2.png',
+      '/Vue-Portfolio-Rebuild/screenshots/habit-tracker/3.png',
+      '/Vue-Portfolio-Rebuild/screenshots/habit-tracker/4.png',
+      '/Vue-Portfolio-Rebuild/screenshots/habit-tracker/5.png',
     ],
     whatILearned: [
       "Managing nested application state as a single JS object",

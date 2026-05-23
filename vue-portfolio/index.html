@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      const redirect = sessionStorage.getItem('redirect')
+      if (redirect) {
+        sessionStorage.removeItem('redirect')
+        window.history.replaceState(null, '', '/Vue-Portfolio-Rebuild' + redirect)
+      }
+    </script>
     <title>Vite App</title>
   </head>
   <body>
