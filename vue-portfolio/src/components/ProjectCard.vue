@@ -1,14 +1,34 @@
 <script setup>
-defineProps({
+import {ref, onUnmounted} from 'vue'
+
+const props = defineProps({
     project: {
         type: Object,
         required: true
     }
 })
+
+const isHovered = ref(false)
+
+function startSlideshow() {
+    isHovered.value = true
+}
+
+function stopSlideshow() {
+    isHovered.value = false
+}
+
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" @mouseenter="startSlideshow" @mouseleave="stopSlideshow">
+        <Transition name="screenshot">
+            <div
+                v-if="project.screenshots.length > 0 && isHovered"
+                class="screenshot-bg"
+                :style="{ backgroundImage: `url(${project.screenshots[0]})` }"
+            ></div>
+        </Transition>
         <div class="card-tags">
             <span class="tag" v-for="tag in project.tags" :key="tag">{{ tag }}</span>
         </div>
@@ -33,6 +53,8 @@ defineProps({
     flex-direction: column;
     gap: 10px;
     transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -78,6 +100,27 @@ defineProps({
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 4px;
+}
+
+.screenshot-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    border-radius: 12px;
+    transform: scale(1.04);
+    z-index: 0;
+}
+
+.screenshot-enter-active { transition: opacity 0.6s ease; }
+.screenshot-leave-active { transition: opacity 0.6s ease; }
+.screenshot-enter-from { opacity: 0; }
+.screenshot-leave-to { opacity: 0; }
+
+.card-tags, .card-title, .card-desc, .card-actions {
+    position: relative;
+    z-index: 1;
 }
 
 .btn-ghost {

@@ -41,7 +41,7 @@ function scrollTo(id) {
             <a @click.prevent="scrollTo('#projects')" class="hero-btn">View my work</a>
         </div>
         <div class="hero-photo">
-            <span>photo</span>
+           <img src="/photo.png" alt="Epicc" />
         </div>
     </section>
 </template>
@@ -137,6 +137,14 @@ function scrollTo(id) {
     transform: translateY(-2px);
 }
 
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.8;
+}
+
 a {
     cursor: pointer;
 }
@@ -163,5 +171,6 @@ a {
         transform: translateY(0);
     }
 }
+
 
 </style>

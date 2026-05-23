@@ -7,7 +7,11 @@ export const projects = [
     tags: ["Python", "CLI"],
     techStack: ["Python", "JSON"],
     demoVideo: null,
-    screenshots: [],
+    screenshots: [
+      '/screenshots/py-quiz/1.png',
+      '/screenshots/py-quiz/2.png',
+      '/screenshots/py-quiz/3.png',
+    ],
     whatILearned: [
       "How to structure a CLI app with multiple navigation layers",
       "File I/O with JSON for persistent leaderboard data",
@@ -24,7 +28,10 @@ export const projects = [
     tags: ["Python", "Recursion"],
     techStack: ["Python", "Turtle"],
     demoVideo: null,
-    screenshots: [],
+    screenshots: [
+      '/screenshots/recursion/1.png',
+      '/screenshots/recursion/2.png',
+    ],
     whatILearned: [
       "How recursion builds on itself to create complex patterns",
       "Managing call stack depth and base cases",
@@ -41,7 +48,11 @@ export const projects = [
     tags: ["JavaScript", "HTML", "CSS"],
     techStack: ["JavaScript", "HTML", "CSS", "localStorage"],
     demoVideo: null,
-    screenshots: [],
+    screenshots: [
+      '/screenshots/js-quiz/1.png',
+      '/screenshots/js-quiz/2.png',
+      '/screenshots/js-quiz/3.png',
+    ],
     whatILearned: [
       "Rebuilding a CLI app as a browser-based UI",
       "Managing async screen transitions with sleep functions",
@@ -58,7 +69,11 @@ export const projects = [
     tags: ["JavaScript", "REST API"],
     techStack: ["JavaScript", "HTML", "CSS", "OpenWeather API"],
     demoVideo: null,
-    screenshots: [],
+    screenshots: [
+      '/screenshots/weather-app/1.png',
+      '/screenshots/weather-app/2.png',
+      '/screenshots/weather-app/3.png',
+    ],
     whatILearned: [
       "Consuming a public REST API with fetch",
       "Promise.all for parallel async operations",
@@ -75,7 +90,12 @@ export const projects = [
     tags: ["Flask", "SQLite", "JavaScript"],
     techStack: ["Python", "Flask", "SQLite", "SQLAlchemy", "JavaScript", "HTML", "CSS"],
     demoVideo: null,
-    screenshots: [],
+    screenshots: [
+      '/screenshots/notes-app/1.png',
+      '/screenshots/notes-app/2.png',
+      '/screenshots/notes-app/3.png',
+      '/screenshots/notes-app/4.png',
+    ],
     whatILearned: [
       "Building and consuming a REST API end to end",
       "CORS configuration between a frontend and backend",
@@ -93,7 +113,13 @@ export const projects = [
     tags: ["JavaScript", "Drag & Drop"],
     techStack: ["JavaScript", "HTML", "CSS", "localStorage"],
     demoVideo: null,
-    screenshots: [],
+    screenshots: [
+      '/screenshots/kanban-board/1.png',
+      '/screenshots/kanban-board/2.png',
+      '/screenshots/kanban-board/3.png',
+      '/screenshots/kanban-board/4.png',
+      '/screenshots/kanban-board/5.png',
+    ],
     whatILearned: [
       "The HTML native Drag and Drop API",
       "Creating custom drag ghost images",
@@ -110,7 +136,13 @@ export const projects = [
     tags: ["JavaScript", "localStorage"],
     techStack: ["JavaScript", "HTML", "CSS", "localStorage"],
     demoVideo: null,
-    screenshots: [],
+    screenshots: [
+      '/screenshots/habit-tracker/1.png',
+      '/screenshots/habit-tracker/2.png',
+      '/screenshots/habit-tracker/3.png',
+      '/screenshots/habit-tracker/4.png',
+      '/screenshots/habit-tracker/5.png',
+    ],
     whatILearned: [
       "Managing nested application state as a single JS object",
       "Why storing dates instead of booleans unlocks streak tracking",

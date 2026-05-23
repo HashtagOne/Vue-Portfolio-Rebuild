@@ -72,7 +72,7 @@ a::after {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--accent-blue);
+    background: var(--accent-purple);
     transition: width 0.25s ease;
 }
 
