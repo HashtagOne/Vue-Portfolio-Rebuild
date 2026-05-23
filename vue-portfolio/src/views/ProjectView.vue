@@ -62,7 +62,16 @@ const project = projects.find(n => n.id === route.params.id);
          <!-- SCREENSHOT -->
          <section class="detail-screenshot">
             <h3> Screenshots</h3>
-            <p class="coming-soon">Coming soon.</p>
+            <div v-if="project.screenshots.length > 0" class="screenshots-grid">
+                <img
+                v-for="(screenshot, index) in project.screenshots"
+                :key="index"
+                :src="screenshot"
+                :alt="`${project.title} screenshot ${index + 1}`"
+                class="screenshot-img"
+                />
+            </div>
+            <p v-else class="coming-soon">Coming soon.</p>
          </section>
     </div>
 
@@ -240,14 +249,32 @@ ul li::before {
     padding: 4px 14px;
 }
 
-.detail-screenshots {
-    padding: 80px;
+.detail-screenshot {
+  padding: 48px 80px;
+  border-top: 0.5px solid var(--border);
 }
 
 .coming-soon {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-top: 12px;
+} 
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.screenshot-img {
+  width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+  border: 0.5px solid var(--border);
+  object-fit: cover;
+  object-position: contain;
+  background: var(--bg-secondary);
 }
 
 .not-found {
