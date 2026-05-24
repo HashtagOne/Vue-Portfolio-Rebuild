@@ -31,7 +31,7 @@ View the live site here: https://hashtagone.github.io/Vue-Portfolio-Rebuild/
 - How Vue's component-based architecture differs from vanilla JS — separating by responsibility rather than file type
 - Reactive variables with ref and watch for dynamic behavior
 - Vue Router — named routes, dynamic segments (:id), scrollBehavior, and programmatic navigation
-- How <Transition> and mode="out-in" coordinate route animations
+- How Transition and mode="out-in" coordinate route animations
 - The gap between local and production environments — base URLs, CDN caching, and why hardcoded paths break on GitHub Pages
 - How animation conflicts compound with routing and component lifecycle, and how to resolve them systematically
 - Deploying a Vite project to GitHub Pages using gh-pages and the 404.html redirect trick
