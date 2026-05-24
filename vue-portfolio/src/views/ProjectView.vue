@@ -6,7 +6,10 @@ const route = useRoute()
 const router = useRouter()
 
 function goBack() {
-    router.push({ path: '/', state: { fromDetail: true } })
+    console.log('before push:', window.location.href)
+    router.push({ path: '/', state: { fromDetail: true } }).then(() => {
+    console.log('after push:', window.location.href)
+    })
 }
 
 onMounted(() => {

@@ -11,10 +11,10 @@ const visible = ref(false)
 
 onMounted(() => {
   if (history.state?.fromDetail) {
-    document.querySelector('#projects')?.scrollIntoView({ behavior: 'instant'})
+    document.querySelector('#projects')?.scrollIntoView({ behavior: 'instant' })
     const cleanState = { ...history.state }
     delete cleanState.fromDetail
-    history.replaceState(cleanState, '', '/')
+    history.replaceState(cleanState, '', window.location.pathname)
   }
   setTimeout(() => {
     visible.value = true
